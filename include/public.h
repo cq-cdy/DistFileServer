@@ -1,3 +1,12 @@
+#include <sys/mman.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <string.h>
+#include <stdio.h>
+using page_t = unsigned long;
+using page_header_t =  int;
+
 const static unsigned int TINY_FILE_SIZE = 1 << 12;   // 4KB
 const static unsigned int SMALL_FILE_SIZE = 1 << 22;  // 4MB
 const static unsigned int MID_FILE_SIZE = 1 << 27;    // 128MB
